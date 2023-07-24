@@ -13,13 +13,14 @@ const { currency, isLoading, error } = useCurrency(currencyId.value)
 const form = ref({
   name: "",
   code: "",
+  conversion: ""
 });
 
  async function validate(id) {
     try {
         const data = {
         name: currency.value.name ,
-        code: currency.value.code
+        code: currency.value.code , 
     }
     console.log(data);
     const response = await updateCurrency (id, data) 
@@ -34,8 +35,8 @@ console.log(currency);
 </script>
 
 <template>
+    <v-container class="mx-auto">
     <v-sheet width="300" class="mx-auto">
-  
       <v-form ref="form">
         <v-text-field v-if="currency"
           v-model="currency.name"
@@ -61,7 +62,15 @@ console.log(currency);
             @click="()=>validate(currency.id)">
             Validate
           </v-btn>
+          <v-btn
+            color="warning"
+            class="mt-4"
+            block
+            to="/home">
+            All currencies
+          </v-btn>
         </div>
       </v-form>
     </v-sheet>
+</v-container>
   </template>

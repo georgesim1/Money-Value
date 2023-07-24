@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Currency;
 use App\Http\Requests\StoreCurrencyRequest;
-use App\Http\Requests\UpdateCurrencyRequest;
+// use App\Http\Requests\UpdateCurrencyRequest;
 
 class CurrencyController extends Controller
 {

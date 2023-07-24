@@ -14,16 +14,12 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
-
 });
 
 Route::middleware(['auth:sanctum'])->resource('/currencies', 'App\Http\Controllers\CurrencyController');
 
-Route::resource('/pairs', 'App\Http\Controllers\PairController');
+Route::middleware(['auth:sanctum'])->resource('/pairs', 'App\Http\Controllers\PairController');
 
-Route::delete('/currencies/{currency}', 'CurrencyController@destroy');
-
-
+Route::middleware(['auth:sanctum'])->delete('/currencies/{currency}', [CurrencyController::class, 'destroy']);

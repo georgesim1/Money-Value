@@ -78,5 +78,12 @@ const rules = {
         </v-btn>
       </v-form>
     </v-card>
+
+
+    <!-- VSnackbar component -->
+    <v-snackbar v-model="store.snackbar.show" color="error">
+      {{ store.snackbar.message }}
+      <v-btn color="white" text @click="store.snackbar.show = false">Close</v-btn>
+    </v-snackbar>
   </div>
 </template>

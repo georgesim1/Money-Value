@@ -17,26 +17,37 @@ class CurrencySeeder extends Seeder
         $currencies = [
             [
                 "name" => "United States Dollar",
-                "code" => "USD"
+                "code" => "USD" ,
+                "currency_rate" => "0.4"
+                
             ], 
             [
                 "name" => "Euro",
-                "code" => "EUR"
+                "code" => "EUR" ,
+                "currency_rate" => "0.6"
             ], 
             [
                 "name" => "Ukrainian hryvnia",
-                "code" => "UAH"
+                "code" => "UAH" ,
+                "currency_rate" => "0.9"
             ], 
             [
                 "name" => "Etherium",
-                "code" => "ETH"
-            ], 
+                "code" => "ETH" ,
+                "currency_rate" => "0.7"
+            ],
+            [
+                "name" => "Bitcoin",
+                "code" => "BTC",
+                "currency_rate" => "0.2"
+            ]
         ];
 
         foreach ($currencies as $currency) {
             Currency::factory()->create([
                 'name' => $currency['name'],
                 'code' => $currency['code'],
+                'currency_rate' => $currency['currency_rate'],
             ]);
         }
 

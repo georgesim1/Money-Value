@@ -14,6 +14,7 @@ class PairSeeder extends Seeder
      */
     public function run(): void
     {
+
         $currencies = Currency::all()->toArray();
         foreach ($currencies as $key => $currency){
             foreach ($currencies as $index => $value) {

@@ -8,3 +8,4 @@ export default function isLogged({ next }) {
     
     router.push({name: "Login"});
 }
+

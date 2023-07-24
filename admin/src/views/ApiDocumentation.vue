@@ -1,10 +1,10 @@
 <script setup>
-import PairsTable from "../components/PairsTable.vue";
+import EndPointList from "../components/EndPointList.vue";
 import NavBar from "@/components/NavBar.vue";
 
 </script>
 
 <template>
   <NavBar />
-  <PairsTable />
+  <EndPointList />
 </template>
