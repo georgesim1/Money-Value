@@ -1,51 +1,74 @@
+MoneyValue - Conversion de monnaie
+Bienvenue sur le projet MoneyValue - une plateforme de conversion de devises développée pour les développeurs.
 
-# Cahier des Charges
-Projet : API de conversion de devises pour MoneyValue
+Description du projet
+MoneyValue est une plateforme de conversion de devises conçue pour fournir un service public et gratuit qui fournit des données sur les conversions de devises les plus demandées. L'objectif du projet est de développer une API REST qui peut être utilisée par des développeurs externes pour convertir une devise en une autre.
 
-# 1. Analyse client
-MoneyValue est une entreprise qui a besoin d'une API publique pour la conversion des devises et d'une administration privée pour gérer les données de cette API. Ces outils permettront une gestion facile des conversions de devises et un suivi des requêtes effectuées pour chaque paire de conversion.
+En plus de l'API, une interface d'administration sera également développée pour gérer les devises disponibles pour la conversion.
 
-# 2. Choix technologiques
-Back-end : Nous utiliserons Laravel, un framework PHP robuste et fiable qui intègre des fonctionnalités de validation de formulaire, de migration de base de données et d'ORM Eloquent.
-Front-end : Vue.js sera utilisé pour l'interface utilisateur de l'administration. Il s'agit d'un framework front-end réactif qui offre une excellente intégration avec Laravel.
+Prérequis
+PHP >= 7.3
+MySQL >= 5.7
+Composer
+Node.js et npm
+Laravel Framework
+Vue.js
+Développement
+L'API sera développée en utilisant le framework Laravel et la base de données MySQL. L'administration sera développée côté client en utilisant le framework Vue.js.
 
-# 3. Evaluation du temps de travail
+Contraintes de développement
+L'anglais doit être utilisé pour les champs et les variables.
+Utilisez le nommage en camelCase / PascalCase pour le nommage des fonctions, des variables et des noms de classes.
+Les méthodes et les propriétés doivent toujours être commentées.
+Utilisez le contrôleur de ressources de Laravel pour le CRUD de ressource.
+Utilisez le service de validation de Laravel pour la gestion des formulaires.
+Les données doivent être récupérées/traitées dans le code à l'aide du composant Eloquent de Laravel.
+Utilisez github pour versionner votre code.
+Mettez en place des migrations et des seeders pour la base de données.
+Installation
+Clonez le dépôt dans votre espace de travail local et naviguez jusqu'au dossier du projet.
 
-Configuration du projet | 0.5
-Authentification | 1
-Administration (visualisation des paires) | 1
-Administration (gestion des paires) | 1
-Administration (statistiques) | 1
-API (vérification de la disponibilité) | 1
-API (récupération des paires) | 1
-API (conversion de devises) | 1
-Documentation | 0.5
-Total | 7
+bash
+Copy code
+git clone https://github.com/your_username/MoneyValue.git
+cd MoneyValue
+Installez les dépendances avec Composer et npm.
 
-# 4. Liste fonctionnelle
-Administration privée :
-Authentification des administrateurs
-Affichage de la liste des paires de conversion
-Ajout, modification et suppression d'une paire de conversion
-Affichage du nombre de requêtes effectuées pour chaque paire
-API REST :
-Vérification de l'état du service
-Récupération de la liste des paires de conversion
-Conversion d'une quantité de devise suivant une paire existante
+bash
+Copy code
+composer install
+npm install
+Copiez le fichier .env.example en .env et modifiez-le pour correspondre à votre configuration de base de données.
 
-#  5. Recettage
-Le recettage sera effectué à la fin de chaque tâche et comprendra des tests manuels et automatiques pour vérifier le bon fonctionnement de chaque fonctionnalité. Tout problème ou limitation sera noté et abordé.
+bash
+Copy code
+cp .env.example .env
+Générez une nouvelle clé d'application.
 
-# 6. Diagramme de la base de données
-Une représentation schématique de la base de données sera fournie, montrant toutes les tables, leurs relations et les champs clés.
+bash
+Copy code
+php artisan key:generate
+Exécutez les migrations pour créer les tables dans votre base de données.
 
-# 7. Documentation de l’API
-GET /api/status : Vérifie si le service est fonctionnel. Retourne un message de statut.
-GET /api/pairs : Retourne la liste des paires de conversion.
-POST /api/convert : Convertit une quantité d'une devise en une autre. Les données retournées comprennent la quantité d'origine, la devise d'origine, la devise cible et la quantité convertie.
+bash
+Copy code
+php artisan migrate
+Exécutez les seeders pour remplir les tables avec des données initiales.
 
-#  8. Adresse Github
-Le projet sera hébergé à l'adresse suivante : https://github.com/georgesim1/Projet-3
+bash
+Copy code
+php artisan db:seed
+Utilisation
+Pour lancer le serveur de développement, exécutez :
 
-# 9. Livrables
-L'archive finale du projet contiendra le code source complet (à l'exception des dossiers vendor et node_modules), le diagramme de la base de données, la documentation de l'API et le cahier des charges.
+bash
+Copy code
+php artisan serve
+Ouvrez votre navigateur et accédez à http://localhost:8000.
+
+Pour lancer le serveur Vue.js, exécutez :
+
+bash
+Copy code
+npm run serve
+Ouvrez votre navigateur et accédez à http://localhost:8080.
