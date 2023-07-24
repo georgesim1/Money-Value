@@ -28,49 +28,33 @@ Mettez en place des migrations et des seeders pour la base de données.
 Installation
 Clonez le dépôt dans votre espace de travail local et naviguez jusqu'au dossier du projet.
 
-bash
-Copy code
-git clone https://github.com/your_username/MoneyValue.git
-cd MoneyValue
+<code>git clone https://github.com/your_username/MoneyValue.git </code>
+<code>cd MoneyValue </code>
 Installez les dépendances avec Composer et npm.
 
-bash
-Copy code
-composer install
-npm install
+<code>composer install</code>
+<code>npm install </code>
 Copiez le fichier .env.example en .env et modifiez-le pour correspondre à votre configuration de base de données.
 
-bash
-Copy code
-cp .env.example .env
+<code>cp .env.example .env</code>
 Générez une nouvelle clé d'application.
 
-bash
-Copy code
-php artisan key:generate
+<code>php artisan key:generate</code>
 Exécutez les migrations pour créer les tables dans votre base de données.
 
-bash
-Copy code
-php artisan migrate
+<code>php artisan migrate</code>
 Exécutez les seeders pour remplir les tables avec des données initiales.
 
-bash
-Copy code
-php artisan db:seed
+<code>php artisan db:seed</code>
 Utilisation
 Pour lancer le serveur de développement, exécutez :
 
-bash
-Copy code
-php artisan serve
+<code>php artisan serve</code>
 Ouvrez votre navigateur et accédez à http://localhost:8000.
 
 Pour lancer le serveur Vue.js, exécutez :
 
-bash
-Copy code
-npm run serve
+<code>npm run serve</code>
 Ouvrez votre navigateur et accédez à http://localhost:8080.
 
 # Documentation API
