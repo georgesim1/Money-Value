@@ -72,3 +72,12 @@ bash
 Copy code
 npm run serve
 Ouvrez votre navigateur et accédez à http://localhost:8080.
+
+Documentation API
+La documentation pour l'API est disponible à /api/documentation.
+
+Contribution
+Les contributions sont les bienvenues ! Veuillez consulter le fichier CONTRIBUTING.md pour plus de détails.
+
+Licence
+Ce projet est sous licence MIT. Voir le fichier LICENSE.md pour plus de détails.
